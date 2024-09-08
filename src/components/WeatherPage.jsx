@@ -19,17 +19,17 @@ const WeatherPage = () => {
 
   const fetchWeatherData = async () => {
     try {
-      const apiKey = '9c802809880932c2feeece5e5b804b2d'; // Your API key
+      const apiKey = '9c802809880932c2feeece5e5b804b2d'; 
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`
       );
       setWeatherData(response.data);
 
-      // Get city coordinates for map
+      
       const { lat, lon } = response.data.city.coord;
       setCityCoords({ lat, lon });
 
-      // Check for rain or cloudy conditions
+      
       const mainDescription = response.data.list[0].weather[0].main.toLowerCase();
       if (mainDescription === 'rain' || mainDescription === 'clouds') {
         setIsRainy(true);
@@ -50,7 +50,7 @@ const WeatherPage = () => {
 
   const generateRaindrops = () => {
     const raindrops = [];
-    if (isRainy) { // Only generate raindrops when isRainy is true
+    if (isRainy) { 
       for (let i = 0; i < 100; i++) {
         const style = {
           left: `${Math.random() * 100}vw`,

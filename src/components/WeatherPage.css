@@ -1,0 +1,189 @@
+/* Container styling */
+.weather-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background: url('https://c1.wallpaperflare.com/path/276/97/99/blue-clouds-sky-background-3043f5acada9403ea854a01fc72dff99.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #ffffff;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: #06274d; 
+}
+
+/* Heading styling */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: font-size 0.3s ease;
+}
+
+/* Day weather card styling with colors and backdrop filter */
+.day-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 15px;
+  margin: 15px;
+  width: 250px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+.unit-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #5fa3de; 
+  border-radius: 10px;
+  color: black;
+  font-size: 1em;
+}
+
+/* Hover effect for day weather cards */
+.day-weather:hover {
+  transform: scale(1.05); /* Zoom-in on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Slight background color change */
+}
+
+/* Weather icon styling */
+.weather-icon {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.5)); /* Shadow effect on icons */
+  transition: filter 0.3s ease;
+}
+
+.weather-icon:hover {
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.7)); /* Enhanced shadow on hover */
+}
+
+/* Text styling */
+p {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+
+p.high-temp {
+  color: #ffffff; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p.low-temp {
+  color: #f4f4f4; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p.description,
+.humidity,
+.wind-speed,
+.pressure {
+  font-style: italic;
+  color: #ffffff; 
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Error and loading messages */
+p.error-message,
+p.loading-message {
+  font-size: 1.5rem;
+  color: #efefef;
+}
+
+/* Container for weather cards */
+.weather-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align cards */
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .day-weather {
+    width: 200px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .day-weather {
+    width: 150px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.chart-container {
+  margin-top: 20px;
+  position: relative;
+  height: 400px;
+  background-color: rgba(4, 21, 42, 0.8);
+}
+
+/* Rain effect styling */
+.rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with rain effect */
+  z-index: 1; /* Ensure rain is behind content */
+}
+
+/* Styling for each raindrop */
+.drop {
+  position: absolute;
+  background: rgb(194, 189, 189); /* Black droplets */
+  width: 2px; /* Small width for droplets */
+  height: 15px; /* Adjust height for visibility */
+  opacity: 0.5; /* Slightly transparent */
+  animation: fall linear infinite; /* Continuous falling animation */
+}
+
+/* Animation for falling raindrops */
+@keyframes fall {
+  to {
+    transform: translateY(100vh); 
+  }
+}
+
+.sunny-background {
+  background: url('https://c1.wallpaperflare.com/path/276/97/99/blue-clouds-sky-background-3043f5acada9403ea854a01fc72dff99.jpg') no-repeat center center fixed;
+  background-size: cover;
+}

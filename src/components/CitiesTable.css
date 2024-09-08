@@ -1,0 +1,266 @@
+/* General styling for the container */
+.cities-table-container {
+  width: 100%;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: url('https://c1.wallpaperflare.com/path/276/97/99/blue-clouds-sky-background-3043f5acada9403ea854a01fc72dff99.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  box-sizing: border-box;
+  position: relative;
+  height:150vh;
+}
+
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(160, 187, 234, 0.712);
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: normal;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.clock {
+  font-size: 18px;
+  color: #fff;
+  font-family: "monospace", sans-serif;
+  font-weight: bold;
+}
+.temperature {
+color: rgb(131, 28, 28);
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+}
+.location {
+  color: rgb(5, 41, 62);
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+}
+.navbar-search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navbar-input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+.navbar-select {
+  width: 200px;
+}
+
+/* Wrapper for search bar */
+.search-bar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+td {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+td:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+td a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+td a:hover {
+  color: #2980b9;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button.active {
+  background-color: #2980b9;
+}
+
+.pagination button:hover {
+  background-color: #2980b9;
+}
+
+/* Map container */
+.map-container {
+  margin-top: 20px;
+  width: 100%;
+  height: 400px;
+}
+
+/* Rain effect */
+@keyframes rain {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1000px 1000px;
+  }
+}
+
+.rain-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png'); /* Light rain pattern */
+  opacity: 0.8; /* Adjust for the rain visibility */
+  z-index: 1;
+  animation: rain 5s linear infinite;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px; /* Reduced padding for mobile */
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .navbar-title {
+    font-size: 13px; /* Smaller font size for mobile */
+    text-align: center; /* Center the title */
+  }
+
+  .clock {
+    font-size: 14px; /* Smaller font size for mobile */
+    margin-top: 10px; /* Spacing for mobile */
+  }
+
+  .navbar-search {
+    flex-direction: column; /* Stack search and select vertically */
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px; /* Spacing for mobile */
+  }
+
+  .navbar-input {
+    padding: 8px; /* Reduced padding for mobile */
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Max width to prevent excessive stretching */
+  }
+
+  .navbar-select {
+    width: 100%; /* Full width on mobile */
+    max-width: 300px; /* Max width to prevent excessive stretching */
+  }
+
+  .pagination button {
+    padding: 6px 10px; /* Smaller padding for mobile */
+    font-size: 12px; /* Smaller font size for mobile */
+    margin: 0 4px;
+  }
+
+  table {
+    font-size: 12px; /* Smaller font size for mobile */
+  }
+
+  th, td {
+    padding: 8px; /* Reduced padding for mobile */
+  }
+
+  th {
+    font-size: 14px; /* Adjust font size for mobile */
+  }
+
+  td {
+    font-size: 12px; /* Adjust font size for mobile */
+  }
+
+  td a {
+    font-size: 12px; /* Font size for links in mobile */
+  }
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 18px;
+  }
+
+  .navbar-search {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-input, .navbar-select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .pagination button {
+    padding: 8px 12px;
+  }
+}

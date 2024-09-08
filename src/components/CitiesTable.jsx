@@ -32,7 +32,7 @@ const CitiesTable = () => {
 
   const fetchCityFromCoords = async (lat, lon) => {
     try {
-      const apiKey = '9c802809880932c2feeece5e5b804b2d'; // Replace with your OpenWeatherMap API key
+      const apiKey = '9c802809880932c2feeece5e5b804b2d';
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`
       );
@@ -51,7 +51,7 @@ const CitiesTable = () => {
           const cityName = await fetchCityFromCoords(latitude, longitude);
           setCurrentCity(cityName);
           try {
-            const apiKey = '9c802809880932c2feeece5e5b804b2d'; // Replace with your OpenWeatherMap API key
+            const apiKey = '9c802809880932c2feeece5e5b804b2d'; 
             const response = await axios.get(
               `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`
             );

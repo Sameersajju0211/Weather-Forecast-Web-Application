@@ -171,7 +171,7 @@ p.loading-message {
   position: absolute;
   background: rgb(194, 189, 189); /* Black droplets */
   width: 2px; /* Small width for droplets */
-  height: 15px; /* Adjust height for visibility */
+  height: 15px;
   opacity: 0.5; /* Slightly transparent */
   animation: fall linear infinite; /* Continuous falling animation */
 }

@@ -228,15 +228,15 @@ td a:hover {
   }
 
   th {
-    font-size: 14px; /* Adjust font size for mobile */
+    font-size: 14px; 
   }
 
   td {
-    font-size: 12px; /* Adjust font size for mobile */
+    font-size: 12px; 
   }
 
   td a {
-    font-size: 12px; /* Font size for links in mobile */
+    font-size: 12px; 
   }
 }
 

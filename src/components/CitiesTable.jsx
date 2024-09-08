@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
-// Removed react-leaflet imports
 
-import './CitiesTable.css'; // Assuming you have the CSS file
+
+import './CitiesTable.css'; 
 
 const CitiesTable = () => {
   const [cities, setCities] = useState([]);
